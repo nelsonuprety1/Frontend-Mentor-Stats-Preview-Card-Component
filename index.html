@@ -16,23 +16,34 @@
 </head>
 <body>
   <div class="container">
-    <img class="main-img" src="/images/image-header-desktop.jpg" alt="main image">
+    <div class="img-component">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/images/image-header-desktop.jpg">
+        <source media="(min-width: 100px)" srcset="/images/image-header-mobile.jpg">
+        <img class="main-img" src="/images/image-header-mobile.jpg" alt="main image">
+      </picture>
+    </div>
+    <!-- <img class="main-img" src="/images/image-header-mobile.jpg" alt="main image"> -->
 
     <h1 class="main-header"> <span class="h1-main"> Get <span class="insight">insights</span> that</span>
       <span class="h1-first">help your business</span>
       <span class="h1-second"> grow.</span></h1>
 
-    <p class="paragraph">Discover the benefits of data analytics and make better decisions regarding revenue, customer
-      experience, and overall efficiency.</p>
+    <p class="paragraph">
+      <span class="para-1"> Discover the benefits of data</span>
+      <span class="para-2">analytics and make better decisions</span>
+      <span class="para-3">regarding revenue, customer</span>
+      <span class="para-4">experience, and overall efficiency.</span>
+    </p>
 
 
 
     <span class="stats">10k+</span>
-    <span class="heading">companies</span>
+    <span class="heading">COMPANIES</span>
     <span class="stats">314</span>
-    <span class="heading">templates</span>
+    <span class="heading">TEMPLATES</span>
     <span class="stats">12m+</span>
-    <span class="heading">queries</span>
+    <span class="heading">QUERIES</span>
   </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
