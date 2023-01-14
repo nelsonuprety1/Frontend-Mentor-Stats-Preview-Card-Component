@@ -1,0 +1,23 @@
+@import url('css-reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    --color-main-background: hsl(233, 47%, 7%);
+    --color-card-background: hsl(244, 38%, 16%);
+    --color-soft-voilet: hsl(277, 64%, 61%);
+    --color-white-main: hsl(0, 0%, 100%);
+    --color-white-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-white-stats: hsla(0, 0%, 100%, 0.6);
+    --font-weight-four: 400;
+    --font-weight-seven: 700;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
