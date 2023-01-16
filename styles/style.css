@@ -117,6 +117,21 @@ body {
     margin-bottom: 20px;
 }
 
+@media (min-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        /* max-width: fit-content; */
+        height: 25rem;
+        width: 60rem;
+    }
+
+    picutre>* {
+        width: 100%;
+        height: 100%;
+    }
+}
+
 
 .attribution {
     font-size: 11px;
