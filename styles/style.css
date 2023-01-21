@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url('css-reset.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
@@ -17,21 +24,29 @@ body {
     font-weight: var(--font-weight-four);
     color: var(--color-white-main);
     margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .container {
     background-color: var(--color-card-background);
-    max-width: 330px;
-    min-height: 650px;
+    width: 375px;
+    height: 90%;
     margin-top: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     text-align: center;
     border-radius: 10px;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 30px auto;
 }
 
 h1 {
@@ -52,25 +67,22 @@ h1 {
 .main-paragraph {
     margin-top: 5px;
     margin-bottom: 30px;
-}
-
-.para-1,
-.para-2,
-.para-3,
-.para-4 {
     font-family: 'Inter',
         sans-serif;
     font-weight: var(--font-weight-four);
     font-size: 0.875rem;
     color: var(--color-white-paragraph);
-    display: block;
     line-height: 1.75;
+    padding: 0 4rem;
 }
 
-
 .img-component {
-    height: 250px;
-    width: 330px;
+    height: 300px;
+    width: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(hsl(277, 64%, 61%, 0.5)), to(hsl(277, 64%, 61%, 0.5))),
+        url('/images/image-header-mobile.jpg');
+    background: -o-linear-gradient(hsl(277, 64%, 61%, 0.5), hsl(277, 64%, 61%, 0.5)),
+        url('/images/image-header-mobile.jpg');
     background: linear-gradient(hsl(277, 64%, 61%, 0.5), hsl(277, 64%, 61%, 0.5)),
         url('/images/image-header-mobile.jpg');
     background-size: cover;
@@ -78,160 +90,73 @@ h1 {
     border-top-left-radius: 10px;
 }
 
-/* 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.overall-stat {
+    padding: 1.5rem;
 }
 
-.container {
-    display: grid;
-    grid-auto-flow: row;
-    border-radius: 10px;
-    justify-content: center;
-    text-align: center;
-    align-self: center;
-    max-width: 350px;
-    min-height: 750px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--color-card-background);
-    overflow: hidden;
-}
-
-picture>* {
-    width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.img-component {
-    position: relative;
-}
-
-.img-component::after {
-    position: absolute;
-    content: '';
-    height: 92%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: hsl(277, 64%, 61%, 0.5);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.main-header {
-    font-family: 'Lexend Deca',
-        sans-serif;
-    font-weight: var(--font-weight-seven);
-    font-size: 1.5rem;
+.overall-stat span {
     color: var(--color-white-main);
-    margin-top: 20px;
-}
-
-.insight {
-    color: var(--color-soft-voilet)
-}
-
-.h1-first,
-.h1-second {
-    display: block;
-}
-
-.stats,
-.heading {
-    display: block;
-}
-
-.paragraph {
-    margin-top: 5px;
-    margin-bottom: 30px;
-}
-
-.para-1,
-.para-2,
-.para-3,
-.para-4 {
     font-family: 'Inter',
         sans-serif;
-    font-weight: var(--font-weight-four);
-    font-size: 0.875rem;
-    color: var(--color-white-paragraph);
-    display: block;
-    line-height: 1.75;
-}
-
-.stats {
-    color: var(--color-white-main);
-    font-family: 'Inter', sans-serif;
     font-weight: var(--font-weight-seven);
     font-size: 1.25rem;
-    margin-top: 10px;
+    /* margin-bottom: -5px; */
 }
 
-.heading {
+.overall-stat p {
     font-family: 'Inter',
         sans-serif;
     font-weight: var(--font-weight-four);
     font-size: 0.7rem;
     color: var(--color-white-stats);
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 
-
 @media (min-width:768px) {
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .container {
+        width: 70rem;
+        height: 25rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
-        justify-content: space-between;
-        min-width: 960px;
-        min-height: 250px;
-    }
-
-    picture {
-        width: 430px;
-        height: 250px;
-    }
-    .main-header,
-    .paragraph,
-    .stat-heading {
-        display: inline-block;
-        margin: 2rem;
-    }
-
-    picture>* {
-        width: 100%;
-        height: 100%;
-        border-top-left-radius: 0px;
-        background-size: cover;
-
     }
 
     .img-component {
-        position: relative;
-    }
-
-    .img-component::after {
-        position: absolute;
-        content: '';
+        background: -webkit-gradient(linear, left top, left bottom, from(hsl(277, 64%, 61%, 0.5)), to(hsl(277, 64%, 61%, 0.5))),
+            url('/images/image-header-desktop.jpg');
+        background: -o-linear-gradient(hsl(277, 64%, 61%, 0.5), hsl(277, 64%, 61%, 0.5)),
+            url('/images/image-header-desktop.jpg');
+        background: linear-gradient(hsl(277, 64%, 61%, 0.5), hsl(277, 64%, 61%, 0.5)),
+            url('/images/image-header-desktop.jpg');
+        background-size: cover;
         height: 100%;
         width: 100%;
-        top: 0;
-        left: 0;
-        background-color: hsl(277, 64%, 61%, 0.5);
         border-top-left-radius: 0px;
-        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
-} */
+    h1 {
+        padding: 2rem 3rem;
+    }
+
+    .statistic {
+        margin: 2rem;
+    }
+
+    .information {
+        text-align: left;
+    }
+
+    .overall-stat {
+        display: inline-block;
+    }
+
+    .overall-stat p {
+        font-size: 1rem;
+    }
+
+}
